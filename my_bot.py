@@ -10,10 +10,10 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 # ---------- ۱. خواندن تنظیمات از متغیرهای محیطی (روش امن) ----------
 try:
-    BOT_TOKEN = os.getenv("7996823682:AAH2tIBwHhvVOr-HA2z-1VEzijBtz-atUAQ")
-    ADMIN_USER_ID = int(os.getenv("7850317765"))
-    GEMINI_API_KEY = os.getenv("AIzaSyAF3J_FtdluJox3WGa8Cx2NiaeXhSNJNX8")
-    CHANNEL_ID = os.getenv("@Epicweebvibes")
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
+    ADMIN_USER_ID = int(os.getenv("ADMIN_USER_ID"))
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    CHANNEL_ID = os.getenv("CHANNEL_ID")
     if not all([BOT_TOKEN, ADMIN_USER_ID, GEMINI_API_KEY, CHANNEL_ID]):
         raise ValueError("یکی از متغیرهای محیطی تنظیم نشده است.")
 except (ValueError, TypeError) as e:
@@ -214,3 +214,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
